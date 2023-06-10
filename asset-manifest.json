@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/plants/static/css/main.d8cddf0e.css",
-    "main.js": "/plants/static/js/main.dd2b4cf8.js",
+    "main.js": "/plants/static/js/main.d9a95273.js",
     "static/js/787.cf18ef63.chunk.js": "/plants/static/js/787.cf18ef63.chunk.js",
     "static/media/hero.png": "/plants/static/media/hero.b3ab9a4a64aaf60b12e1.png",
     "static/media/plant1.png": "/plants/static/media/plant1.c88ab8bceb6e67a6a48c.png",
@@ -25,7 +25,6 @@
     "static/media/faux.png": "/plants/static/media/faux.66a2d869574283491bf3.png",
     "static/media/mammileria.png": "/plants/static/media/mammileria.d2f42bd8398fb264c4ea.png",
     "static/media/pepper.png": "/plants/static/media/pepper.c617a34f534213907f7a.png",
-    "static/media/leaf-right.png": "/plants/static/media/leaf-right.2e6151f241a40e24bf50.png",
     "static/media/plant9.png": "/plants/static/media/plant9.1ed61b359820b8652bc8.png",
     "static/media/Ubelmannie.jpg": "/plants/static/media/Ubelmannie.54cf43ce335550381a6f.jpg",
     "static/media/plant16.png": "/plants/static/media/plant16.6ca6b81ac5490ef1b23c.png",
@@ -57,11 +56,11 @@
     "static/media/mail.svg": "/plants/static/media/mail.d8c278ca702b6daf66ccd6415772f6b2.svg",
     "static/media/facebook.svg": "/plants/static/media/facebook.db5e23e81ad0c9846e946c774f8ecdce.svg",
     "main.d8cddf0e.css.map": "/plants/static/css/main.d8cddf0e.css.map",
-    "main.dd2b4cf8.js.map": "/plants/static/js/main.dd2b4cf8.js.map",
+    "main.d9a95273.js.map": "/plants/static/js/main.d9a95273.js.map",
     "787.cf18ef63.chunk.js.map": "/plants/static/js/787.cf18ef63.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d8cddf0e.css",
-    "static/js/main.dd2b4cf8.js"
+    "static/js/main.d9a95273.js"
   ]
 }
