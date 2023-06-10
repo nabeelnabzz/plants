@@ -1,24 +1,46 @@
 import React from "react";
 import star from "../../../assets/images/Star.svg";
-import plant1 from "../../../assets/images/plant1.png";
+import swisschees from "../../../assets/images/swisschees.png";
+import bonsai from "../../../assets/images/bonsai.png";
+import moneyplant from "../../../assets/images/moneyplant.png";
+import aquarium from "../../../assets/images/aquarium.png";
+import devilsplant from "../../../assets/images/devilsplant.png";
+import terarium from "../../../assets/images/terarium.png";
+import terariumone from "../../../assets/images/terariumone.png";
+import anthurium from "../../../assets/images/anthurium.png";
+import terrariumtwo from "../../../assets/images/terrariumtwo.png";
+import cactus from "../../../assets/images/cactus.png";
+import lemon from "../../../assets/images/lemon.png";
+import terrariumthree from "../../../assets/images/terrariumthree.png";
 import plant2 from "../../../assets/images/plant2.png";
 import plant3 from "../../../assets/images/plant3.png";
 import plant4 from "../../../assets/images/plant4.png";
 import plant5 from "../../../assets/images/plant5.png";
 import plant6 from "../../../assets/images/plant6.png";
+import { useLocation, useParams } from "react-router-dom";
 
 const PalntsViewTail = () => {
+  const location = useLocation();
+  const { state } = location;
+  const params = useParams();
+  console.log("params", params);
+  console.log("state", state);
   return (
     <div className="flex justify-center items-center">
       <div>
         <div className="grid grid-cols-12 gap-5">
           <div className="flex flex-col gap-3 col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3">
-            <div className="text-[25px] mt-5">Devil's ivy plant</div>
+            <div className="text-[25px] mt-5">{state?.name}</div>
             <div className="flex gap-3">
-              <div className="line-through text-[#E84F27] text-[24px]">
-                <span className="text-black">₹750.00</span>
-              </div>
-              <div className="text-[#2F5233] text-[24px]">₹550.00</div>
+              {state?.offer ? (
+                <div className="line-through text-[#E84F27] text-[24px]">
+                  <span className="text-black">{state?.offer}</span>
+                </div>
+              ) : (
+                ""
+              )}
+
+              <div className="text-[#2F5233] text-[24px]">{state?.amount}</div>
             </div>
             <div className="flex gap-3 items-center">
               <img src={star} alt="star" width={30} />
@@ -47,7 +69,38 @@ const PalntsViewTail = () => {
           </div>
 
           <div className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6">
-            <img src={plant1} alt="plant" width={"570px"} height={"521px"} />
+            <img
+              src={
+                params?.id === "swisschees"
+                  ? swisschees
+                  : params?.id === "bonsai"
+                  ? bonsai
+                  : params?.id === "moneyplant"
+                  ? moneyplant
+                  : params?.id === "aquarium"
+                  ? aquarium
+                  : params?.id === "devilsplant"
+                  ? devilsplant
+                  : params?.id === "terarium"
+                  ? terarium
+                  : params?.id === "terariumone"
+                  ? terariumone
+                  : params?.id === "anthurium"
+                  ? anthurium
+                  : params?.id === "cactus"
+                  ? cactus
+                  : params?.id === "terrariumtwo"
+                  ? terrariumtwo
+                  : params?.id === "lemon"
+                  ? lemon
+                  : params?.id === "terrariumthree"
+                  ? terrariumthree
+                  : ""
+              }
+              alt="plant"
+              width={"570px"}
+              height={"521px"}
+            />
           </div>
 
           <div className="flex flex-col gap-3">
