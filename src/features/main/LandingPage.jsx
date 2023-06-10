@@ -7,7 +7,7 @@ import delivery from "../../assets/images/home-delivery.png";
 import customize from "../../assets/images/customize-terrarium.png";
 import terrarium from "../../assets/images/terrarium.png";
 import hoyaCornasa from "../../assets/images/HoyaCornasa.png";
-import rightSideLeaf from "../../assets/images/leaf-right.png";
+// import rightSideLeaf from "../../assets/images/leaf-right.png";
 import faux from "../../assets/images/faux.png";
 import plant5 from "../../assets/images/plant5.png";
 import naturalAquarium from "../../assets/images/naturalAquarium.png";
@@ -195,14 +195,14 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="absolute right-[-100px]">
+      {/* <div className="absolute right-[-100px]">
         <img
           className="w-[30%] sm:w-[50%] md:w-[70%] lg:w-[100%]:"
           src={rightSideLeaf}
           alt="hero"
           height=""
         />
-      </div>
+      </div> */}
 
       <div
         className="grid grid-cols-12 gap-5 px-[100px] font-normal text-left mt-[80px] text-[34px] justify-center !items-center relative"
