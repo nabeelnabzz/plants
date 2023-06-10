@@ -7,22 +7,65 @@ import bagWhite from "../../../assets/images/bag-white.svg";
 import heartWhite from "../../../assets/images/heart-white.svg";
 import personWhite from "../../../assets/images/peaple-white.svg";
 import searchWhite from "../../../assets/images/search-white.svg";
+import { Link } from "react-router-dom";
 
 const Header = ({ color }) => {
   return (
     <nav className={`grid grid-cols-12 gap-5 items-center ${color}`}>
-      <div className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3">
-        <h2 className="text-[40px]">Terra Blooms</h2>
+      <div className="flex justify-between col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3">
+        <h2 className="text-[40px]">
+          <Link to="/">Terra Blooms</Link>
+        </h2>
       </div>
-      <ul className="flex justify-center items-center flex-wrap col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 gap-8">
-        <li className="text-[16px]">Terrarium</li>
-        <li className="text-[16px]">Plants</li>
-        <li className="text-[16px]">Natural Aquarium</li>
-        <li className="text-[16px]">Customize</li>
-        <li className="text-[16px]">Blog</li>
-        <li className="text-[16px]">About Us</li>
+
+      <div className="!hidden justify-between col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3 !sm:flex !md:hidden !lg:hidden">
+        <input type="checkbox" id="menu-toggle" className="hidden" />
+        <label for="menu-toggle" className="cursor-pointer">
+          <svg
+            className={color ? `w-6 h-6 text-white` : `w-6 h-6 text-black`}
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M3 5h18v2H3zm0 6h18v2H3zm0 6h18v2H3z"
+            ></path>
+          </svg>
+        </label>
+        <ul className="hidden" id="menu-items">
+          <li>
+            <a href="/">Menu Item 1</a>
+          </li>
+          <li>
+            <a href="/">Menu Item 2</a>
+          </li>
+          <li>
+            <a href="/">Menu Item 3</a>
+          </li>
+        </ul>
+      </div>
+
+      <ul className="justify-center items-center flex-wrap col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 gap-8 hidden sm:hidden md:flex lg:flex">
+        <li className="text-[16px]">
+          <Link to="/products">Products</Link>
+        </li>
+        <li className="text-[16px]">
+          <Link to="/plants-view">Plants</Link>
+        </li>
+        <li className="text-[16px]">
+          <Link to="/naturalAquarium">Natural Aquarium</Link>
+        </li>
+        <li className="text-[16px]">
+          <Link to="/customize">Customize</Link>
+        </li>
+        <li className="text-[16px]">
+          <Link to="/ourWork">Blog</Link>
+        </li>
+
+        <li className="text-[16px]">
+          <Link to="/aboutUs">About Us</Link>
+        </li>
       </ul>
-      <div className="flex justify-end gap-3 col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3">
+      <div className="flex justify-end gap-6 col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3">
         <img src={color ? bagWhite : bag} alt="damage img" width={20} />
         <img src={color ? heartWhite : heart} alt="damage img" width={20} />
         <img src={color ? personWhite : person} alt="damage img" width={20} />

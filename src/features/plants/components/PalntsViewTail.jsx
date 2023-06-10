@@ -12,7 +12,7 @@ const PalntsViewTail = () => {
     <div className="flex justify-center items-center">
       <div>
         <div className="grid grid-cols-12 gap-5">
-          <div className="flex flex-col gap-3 col-span-12 sm:col-span-6 md:col-span-2 lg:col-span-3">
+          <div className="flex flex-col gap-3 col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3">
             <div className="text-[25px] mt-5">Devil's ivy plant</div>
             <div className="flex gap-3">
               <div className="line-through text-[#E84F27] text-[24px]">
@@ -46,7 +46,7 @@ const PalntsViewTail = () => {
             </ul>
           </div>
 
-          <div className="col-span-12 sm:col-span-6 md:col-span-2 lg:col-span-6">
+          <div className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6">
             <img src={plant1} alt="plant" width={"570px"} height={"521px"} />
           </div>
 
@@ -77,7 +77,7 @@ const PalntsViewTail = () => {
           </div>
         </div>
         <div className="border-t border-grey-50 my-5"></div>
-        <ul className="flex justify-start items-center flex-wrap col-span-12 sm:col-span-6 md:col-span-2 lg:col-span-2 gap-5">
+        <ul className="flex justify-start items-center flex-wrap col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-2 gap-5">
           <li className="text-[16px]">
             Description
             <div className="border-t border-black"></div>
@@ -91,7 +91,7 @@ const PalntsViewTail = () => {
         <div className="border-t border-grey-50 my-5"></div>
 
         <div className="grid grid-cols-12">
-          <div className="col-span-12 sm:col-span-6 md:col-span-2 lg:col-span-6 mt-10 text-[#666666] font-light">
+          <div className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 mt-10 text-[#666666] font-light">
             <img src={plant2} alt="plant" width="472px" height="511px" />
             <p>
               It is also called devil's vine or devil's ivy because it is almost
@@ -101,7 +101,7 @@ const PalntsViewTail = () => {
               in many parts of the Indian subcontinent
             </p>
           </div>
-          <div className="col-span-12 sm:col-span-6 md:col-span-2 lg:col-span-6 mt-10">
+          <div className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 mt-10">
             <p className="text-[34px] font-light">
               What is Devil's Ivy good for?
             </p>
@@ -124,7 +124,7 @@ const PalntsViewTail = () => {
 
         <h3 className="text-[32px] text-center mt-[70px]">Related Product</h3>
         <div className="grid grid-cols-12 mt-8">
-          <div className="col-span-12 sm:col-span-6 md:col-span-2 lg:col-span-4">
+          <div className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4">
             <div>
               <img src={plant4} alt="plant" width="" height="" />
             </div>
@@ -133,7 +133,7 @@ const PalntsViewTail = () => {
             </div>
             <div className="text-[16px] font-normal text-center"> ₹800</div>
           </div>
-          <div className="col-span-12 sm:col-span-6 md:col-span-2 lg:col-span-4 relative">
+          <div className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4 relative">
             <div className="absolute p-2 bg-[#2F5233] text-white rounded-tl-lg rounded-br-lg">
               50% Off
             </div>
@@ -150,7 +150,7 @@ const PalntsViewTail = () => {
               <div className="text-[16px] font-normal text-center"> ₹800</div>
             </div>
           </div>
-          <div className="col-span-12 sm:col-span-6 md:col-span-2 lg:col-span-4">
+          <div className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4">
             <div>
               <img src={plant6} alt="plant" width="" height="" />
             </div>
