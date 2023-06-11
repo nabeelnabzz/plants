@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../containers/components/Header/Header";
 import hero from "../../assets/images/hero.png";
 import Footer from "../../containers/components/Footer/Footer";
-// import BreadCrumbs from "../../containers/components/BreadCrumbs";
 import productIamge1 from "../../assets/images/product-image-small1.png";
 import productIamge2 from "../../assets/images/product-image-small-2.png";
 import productIamge3 from "../../assets/images/product-image-small-3.png";
@@ -22,21 +21,44 @@ import filter from "../../assets/images/Filter.svg";
 import sort from "../../assets/images/Sort.svg";
 import PlantCard from "../../components/PlantCard";
 import { useNavigate } from "react-router-dom";
+import AOS from "aos";
 
 const Products = () => {
   const navigate = useNavigate();
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       <div className="relative text-white">
         <img className="" src={hero} alt="hero" width="100%" height="800px" />
-        <div className="w-[85%] absolute top-0 left-0 right-0 mx-auto">
-          <Header color="text-white" />
-          <div className="max-w-[800px] text-center top-0 left-0 right-0 mx-auto mt-10">
-            <h1 className="text-[30px] sm:text-[40px] md:text-[60px] lg:text-[80px] leading-[120%]">
-              Products
-            </h1>
-            {/* <BreadCrumbs name="Home" subName="Products" color={"absolute"} /> */}
-          </div>
+        <div
+          className="w-[85%] absolute top-0 left-0 right-0 mx-auto"
+          data-aos="fade-up"
+        >
+          <Header
+            color="text-white"
+            menuOpen={menuOpen}
+            handleMenuToggle={handleMenuToggle}
+          />
+          {!menuOpen ? (
+            <div className="max-w-[800px] text-center top-0 left-0 right-0 mx-auto mt-10">
+              <h1 className="text-[30px] sm:text-[40px] md:text-[60px] lg:text-[80px] leading-[120%]">
+                Products
+              </h1>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
 
@@ -57,11 +79,11 @@ const Products = () => {
             </div>
           </div>
           <div className="flex gap-5 px-10 py-5 justify-between mt-10">
-            <button className="border border-neutral-400 text-[18px] text-black px-10 py-3 flex items-center gap-2">
+            <button className="border border-neutral-400 text-[18px] text-black px-10 py-3 flex items-center gap-2 hover:bg-[#2F5233] hover:text-white">
               <img src={filter} alt="filter" width="" height="" />
               Filter
             </button>
-            <button className="border border-neutral-400 text-[18px] text-black px-10 py-3 flex items-center gap-2">
+            <button className="border border-neutral-400 text-[18px] text-black px-10 py-3 flex items-center gap-2 hover:bg-[#2F5233] hover:text-white">
               <img src={sort} alt="filter" width="" height="" />
               Sort
             </button>

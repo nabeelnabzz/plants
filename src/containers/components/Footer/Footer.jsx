@@ -7,11 +7,11 @@ import youtube from "../../../assets/images/youtube.svg";
 
 const Footer = () => {
   return (
-    <div className="bg-[#2F5233] h-full lg:h-[410px]  w-full mt-[53px]">
-      <div className="grid grid-cols-12 mt-8 text-[#F2FFF4] font-normal p-[50px] gap-8">
-        <div className="col-span-12 sm:col-span-6 md:col-span-2 lg:col-span-3 flex flex-col items-left justify-center gap-5">
+    <div className="bg-[#2F5233] h-full lg:h-[410px]  w-full mt-[53px] p-10">
+      <div className="flex flex-col justify-around md:flex-row lg:flex-row mt-8 text-[#F2FFF4] font-normal gap-8">
+        <div className="flex flex-col items-left justify-center gap-5">
           <h3 className="text-[34px] font-light">Green Museum</h3>
-          <div>
+          <div className="max-w-[300px]">
             <p className="text-[16px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
               architecto error quisquam eaque delectus ab amet veniam soluta
@@ -27,7 +27,7 @@ const Footer = () => {
             <img src={youtube} alt="star" width={24} />
           </div>
         </div>
-        <div className="col-span-12 sm:col-span-6 md:col-span-2 lg:col-span-3 mr-auto sm:mx-auto">
+        <div className="mr-auto sm:mx-auto">
           <div className="flex flex-col gap-5 items-left">
             <div>
               <div className="">Help & Information</div>
@@ -40,7 +40,7 @@ const Footer = () => {
             <div className="">Store Location</div>
           </div>
         </div>
-        <div className="col-span-12 sm:col-span-6 md:col-span-2 lg:col-span-3 mr-auto sm:mx-auto">
+        <div className="mr-auto sm:mx-auto">
           <div className="flex flex-col gap-3">
             <div>
               <div className="">Services</div>
@@ -51,7 +51,7 @@ const Footer = () => {
             <div className="">Product Selling</div>
           </div>
         </div>
-        <div className="col-span-12 sm:col-span-6 md:col-span-2 lg:col-span-3 mr-auto sm:mx-auto">
+        <div className="mr-auto sm:mx-auto">
           <div className="flex flex-col gap-3">
             <div>
               <div className="">Quick Links</div>

@@ -9,20 +9,18 @@ import personWhite from "../../../assets/images/peaple-white.svg";
 import searchWhite from "../../../assets/images/search-white.svg";
 import { Link } from "react-router-dom";
 
-const Header = ({ color }) => {
+const Header = ({ color, menuOpen, handleMenuToggle }) => {
   return (
     <nav className={`grid grid-cols-12 gap-5 items-center ${color}`}>
-      <div className="flex justify-between col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3">
-        <h2 className="text-[40px]">
-          <Link to="/">Terra Blooms</Link>
-        </h2>
-      </div>
-
-      <div className="!hidden justify-between col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3 !sm:flex !md:hidden !lg:hidden">
+      <div className="flex gap-3 col-span-4 sm:col-span-5 md:col-span-6 lg:col-span-3 md:hidden !sm:flex mt-4">
         <input type="checkbox" id="menu-toggle" className="hidden" />
-        <label for="menu-toggle" className="cursor-pointer">
+        <label
+          htmlFor="menu-toggle"
+          className="cursor-pointer"
+          onClick={handleMenuToggle}
+        >
           <svg
-            className={color ? `w-6 h-6 text-white` : `w-6 h-6 text-black`}
+            className={color ? "w-6 h-6 text-white" : "w-6 h-6 text-black"}
             viewBox="0 0 24 24"
           >
             <path
@@ -31,20 +29,40 @@ const Header = ({ color }) => {
             ></path>
           </svg>
         </label>
-        <ul className="hidden" id="menu-items">
-          <li>
-            <a href="/">Menu Item 1</a>
-          </li>
-          <li>
-            <a href="/">Menu Item 2</a>
-          </li>
-          <li>
-            <a href="/">Menu Item 3</a>
-          </li>
-        </ul>
+        {menuOpen && (
+          <ul className="flex flex-col" id="menu-items">
+            <li className="text-[16px]">
+              <Link to="/products">Products</Link>
+            </li>
+            <li className="text-[16px]">
+              <Link to="/plants-view">Plants</Link>
+            </li>
+            <li className="text-[16px]">
+              <Link to="/naturalAquarium">Natural Aquarium</Link>
+            </li>
+            <li className="text-[16px]">
+              <Link to="/customize">Customize</Link>
+            </li>
+            <li className="text-[16px]">
+              <Link to="/ourWork">Blog</Link>
+            </li>
+            <li className="text-[16px]">
+              <Link to="/aboutUs">About Us</Link>
+            </li>
+          </ul>
+        )}
       </div>
+      {!menuOpen ? (
+        <div className="flex justify-between col-span-8 sm:col-span-6 md:col-span-6 lg:col-span-3">
+          <h2 className="text-[20px] md:text-[40px] lg:text-[40px]">
+            <Link to="/">Terra Blooms</Link>
+          </h2>
+        </div>
+      ) : (
+        ""
+      )}
 
-      <ul className="justify-center items-center flex-wrap col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 gap-8 hidden sm:hidden md:flex lg:flex">
+      <ul className="hidden justify-center items-center flex-wrap col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 gap-8 sm:hidden md:flex lg:flex">
         <li className="text-[16px]">
           <Link to="/products">Products</Link>
         </li>
@@ -65,12 +83,36 @@ const Header = ({ color }) => {
           <Link to="/aboutUs">About Us</Link>
         </li>
       </ul>
-      <div className="flex justify-end gap-6 col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3">
-        <img src={color ? bagWhite : bag} alt="damage img" width={20} />
-        <img src={color ? heartWhite : heart} alt="damage img" width={20} />
-        <img src={color ? personWhite : person} alt="damage img" width={20} />
-        <img src={color ? searchWhite : search} alt="damage img" width={20} />
-      </div>
+      {!menuOpen ? (
+        <div className="flex justify-end gap-6 col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3">
+          <img
+            className="cursor-pointer"
+            src={color ? bagWhite : bag}
+            alt="damage img"
+            width={20}
+          />
+          <img
+            className="cursor-pointer"
+            src={color ? heartWhite : heart}
+            alt="damage img"
+            width={20}
+          />
+          <img
+            className="cursor-pointer"
+            src={color ? personWhite : person}
+            alt="damage img"
+            width={20}
+          />
+          <img
+            className="cursor-pointer"
+            src={color ? searchWhite : search}
+            alt="damage img"
+            width={20}
+          />
+        </div>
+      ) : (
+        ""
+      )}
     </nav>
   );
 };

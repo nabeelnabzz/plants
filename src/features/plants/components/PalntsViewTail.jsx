@@ -23,8 +23,6 @@ const PalntsViewTail = () => {
   const location = useLocation();
   const { state } = location;
   const params = useParams();
-  console.log("params", params);
-  console.log("state", state);
   return (
     <div className="flex justify-center items-center">
       <div>
@@ -106,25 +104,25 @@ const PalntsViewTail = () => {
           <div className="flex flex-col gap-3">
             <div className="flex gap-4">
               <div className="flex">
-                <div className="text-[24px] col-span-1 border border-black p-2 w-[50px] h-[56px] text-center">
+                <div className="text-[24px] col-span-1 border border-black p-2 w-[50px] h-[56px] text-center hover:bg-[#2F5233] hover:text-white">
                   1
                 </div>
                 <div className="flex flex-col">
-                  <button className="border border-black w-[28px] h-[28px]">
+                  <button className="border border-black w-[28px] h-[28px] hover:bg-[#2F5233] hover:text-white">
                     +
                   </button>
-                  <button className="border border-black  w-[28px] h-[28px]">
+                  <button className="border border-black  w-[28px] h-[28px] hover:bg-[#2F5233] hover:text-white">
                     -
                   </button>
                 </div>
               </div>
               <div>
-                <button className="border border-black w-[150px] h-[56px]">
+                <button className="border border-black w-[150px] h-[56px] hover:bg-[#2F5233] hover:text-white">
                   Add to cart
                 </button>
               </div>
             </div>
-            <div className="text-[#ffffff] bg-[#2F5233] h-[56px] w-[246px] flex items-center justify-center">
+            <div className="text-[#ffffff] bg-[#2F5233] h-[56px] w-[246px] flex items-center justify-center hover:bg-[#3d6342] hover:text-white">
               <button>Buy now</button>
             </div>
           </div>

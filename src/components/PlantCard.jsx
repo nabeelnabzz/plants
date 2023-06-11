@@ -6,7 +6,7 @@ const PlantCard = ({ image, name, amount, offer, percentage }) => {
       <div>
         {offer ? (
           <div className="absolute p-2 bg-[#2F5233] text-white rounded-tl-lg rounded-br-lg">
-           {percentage}
+            {percentage}
           </div>
         ) : (
           ""
