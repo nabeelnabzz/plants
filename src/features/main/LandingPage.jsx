@@ -7,7 +7,6 @@ import delivery from "../../assets/images/home-delivery.png";
 import customize from "../../assets/images/customize-terrarium.png";
 import terrarium from "../../assets/images/terrarium.png";
 import hoyaCornasa from "../../assets/images/HoyaCornasa.png";
-// import rightSideLeaf from "../../assets/images/leaf-right.png";
 import faux from "../../assets/images/faux.png";
 import plant5 from "../../assets/images/plant5.png";
 import naturalAquarium from "../../assets/images/naturalAquarium.png";
@@ -46,7 +45,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <>
+    <div className="overflow-hidden">
       <div className="relative text-white">
         <img className="" src={hero} alt="hero" width="100%" height="800px" />
         <div
@@ -61,7 +60,7 @@ const LandingPage = () => {
           {!menuOpen ? (
             <>
               <div className="max-w-[800px] text-center top-0 left-0 right-0 mx-auto mt-0 sm:mt-0 md:mt-[100px[] lg:mt-[180px] ">
-                <h1 className="mt-5 md:mt-2 lg:mt-2 text-[30px] sm:text-[40px] md:text-[60px] lg:text-[80px] leading-[120%]">
+                <h1 className="mt-8 md:mt-2 lg:mt-2 text-[30px] sm:text-[40px] md:text-[60px] lg:text-[80px] leading-[120%]">
                   I’m rooting for my flowers to grow.
                 </h1>
               </div>
@@ -236,15 +235,6 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* <div className="absolute right-[-100px]">
-        <img
-          className="w-[30%] sm:w-[50%] md:w-[70%] lg:w-[100%]:"
-          src={rightSideLeaf}
-          alt="hero"
-          height=""
-        />
-      </div> */}
-
       <div
         className="grid grid-cols-12 gap-5 px-[50px] md:px-[100px] lg:px-[100px] font-normal text-left mt-[80px] text-[34px] justify-center !items-center relative"
         id="ourWork"
@@ -400,7 +390,7 @@ const LandingPage = () => {
         What People Are Saying....
       </h3>
       <div
-        className="flex flex-col md:flex-row lg:flex-row mt-[80px] text-[#333333] gap-10 m-10"
+        className="flex flex-col md:flex-row lg:flex-row mt-[80px] text-[#333333] gap-10 px-[20px] md:px-[100px] lg:px-[100px]"
         data-aos="fade-up"
       >
         <div className="flex flex-col justify-center items-center">
@@ -460,7 +450,7 @@ const LandingPage = () => {
       <div id="aboutUs">
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

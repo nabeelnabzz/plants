@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 
 const Header = ({ color, menuOpen, handleMenuToggle }) => {
   return (
-    <nav className={`grid grid-cols-12 gap-5 items-center ${color}`}>
-      <div className="flex gap-3 col-span-4 sm:col-span-5 md:col-span-6 lg:col-span-3 md:hidden !sm:flex mt-4">
+    <nav className={`grid grid-cols-12 gap-5 items-center ${color} mt-2`}>
+      <div className="flex gap-5 col-span-2 sm:col-span-4 md:col-span-4 lg:col-span-3 md:hidden !sm:flex mt-2">
         <input type="checkbox" id="menu-toggle" className="hidden" />
         <label
           htmlFor="menu-toggle"
@@ -30,7 +30,7 @@ const Header = ({ color, menuOpen, handleMenuToggle }) => {
           </svg>
         </label>
         {menuOpen && (
-          <ul className="flex flex-col" id="menu-items">
+          <ul className="flex flex-col gap-2" id="menu-items">
             <li className="text-[16px]">
               <Link to="/products">Products</Link>
             </li>
@@ -53,7 +53,7 @@ const Header = ({ color, menuOpen, handleMenuToggle }) => {
         )}
       </div>
       {!menuOpen ? (
-        <div className="flex justify-between col-span-8 sm:col-span-6 md:col-span-6 lg:col-span-3">
+        <div className="hidden justify-between col-span-8 sm:col-span-6 md:col-span-6 lg:col-span-3 sm:hidden md:flex lg:flex">
           <h2 className="text-[20px] md:text-[40px] lg:text-[40px]">
             <Link to="/">Terra Blooms</Link>
           </h2>
@@ -83,8 +83,9 @@ const Header = ({ color, menuOpen, handleMenuToggle }) => {
           <Link to="/aboutUs">About Us</Link>
         </li>
       </ul>
+
       {!menuOpen ? (
-        <div className="flex justify-end gap-6 col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3">
+        <div className="flex justify-end gap-6 col-span-10 sm:col-span-6 md:col-span-6 lg:col-span-3">
           <img
             className="cursor-pointer"
             src={color ? bagWhite : bag}

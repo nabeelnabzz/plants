@@ -38,7 +38,7 @@ const Products = () => {
   }, []);
 
   return (
-    <>
+    <div className="overflow-hidden">
       <div className="relative text-white">
         <img className="" src={hero} alt="hero" width="100%" height="800px" />
         <div
@@ -63,7 +63,7 @@ const Products = () => {
       </div>
 
       <div className="w-full hidden justify-center items-center sm:hidden md:flex lg:flex">
-        <div className="bg-white p-10 absolute !mt-[300px]">
+        <div className="bg-white p-10 absolute !mt-[400px]">
           <div className="flex justify-center items-center gap-[100px] text-[24px] mt-10">
             <div className="flex flex-col justify-center items-center gap-2">
               <img src={productIamge1} alt="plant" width="" height="" />
@@ -305,6 +305,18 @@ const Products = () => {
                 offer="₹5600"
                 percentage="20% off"
               />
+            </div>
+          </div>
+          
+          <div className="flex gap-5 justify-center mt-5">
+            <div className="text-[24px] col-span-1 border border-black p-2 w-[50px] h-[56px] text-center hover:bg-[#2F5233] hover:text-white">
+              1
+            </div>
+            <div className="text-[24px] col-span-1 border border-black p-2 w-[50px] h-[56px] text-center hover:bg-[#2F5233] hover:text-white">
+              2
+            </div>
+            <div className="text-[24px] col-span-1 border border-black p-2 w-[50px] h-[56px] text-center hover:bg-[#2F5233] hover:text-white">
+              3
             </div>
           </div>
         </div>
@@ -556,12 +568,25 @@ const Products = () => {
               />
             </div>
           </div>
+
+          <div className="flex gap-5 justify-center mt-5">
+            <div className="text-[24px] col-span-1 border border-black p-2 w-[50px] h-[56px] text-center hover:bg-[#2F5233] hover:text-white">
+              1
+            </div>
+            <div className="text-[24px] col-span-1 border border-black p-2 w-[50px] h-[56px] text-center hover:bg-[#2F5233] hover:text-white">
+              2
+            </div>
+            <div className="text-[24px] col-span-1 border border-black p-2 w-[50px] h-[56px] text-center hover:bg-[#2F5233] hover:text-white">
+              3
+            </div>
+          </div>
         </div>
       </div>
-      <div id="aboutUs" className="mt-0 sm:mt-0 md:mt-[1200px] lg:mt-[1200px]">
+
+      <div id="aboutUs" className="mt-0 sm:mt-0 md:mt-[1200px] lg:mt-[1300px]">
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 
